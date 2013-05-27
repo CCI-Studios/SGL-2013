@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+
+.field-name-field-images {
+	padding: 1.5em;
+	background: $color-system;
+	overflow: hidden;
+
+	.field-item {
+		float: left;
+		width: 25%;
+
+		text-align: center;
+	}
+}
+
+// contact info link
+.field-name-contact-info-link {
+	float: right;
+}

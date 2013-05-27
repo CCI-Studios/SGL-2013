@@ -1,0 +1,15 @@
+.siteMessage {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	height: 147px;
+	padding: 20px 149px 0 0;
+
+	color: #164270;
+	font-size: 1.1em;
+	text-align: right;
+	text-transform: uppercase;
+	background: url(../images/compass.png) right top no-repeat;
+}
+
+.siteMessage + .siteMessage { display: none; }

@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+.mediaList {
+	clear: both;
+
+
+	.views-row {
+		float: left;
+		width: 23%;
+		margin: 0 2% 0 0;
+
+		list-style: none;
+	}
+
+	img { display: block; }
+}
+
+.mediaItem {
+
+	.views-field-field-youtube-link {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		padding: 10px;
+
+		background: $color-system;
+	}
+
+	img { display: block; }
+}

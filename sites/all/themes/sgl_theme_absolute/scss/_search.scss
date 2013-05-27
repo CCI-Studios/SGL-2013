@@ -1,0 +1,35 @@
+#search-block-form {
+	position: relative;
+
+	input[type=text] {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		width: 180px;
+		height: 24px;
+		padding-right: 25px;
+
+		line-height: 24px;
+	}
+
+	input[type=submit] {
+		display: block;
+		position: absolute;
+		top: 4px;
+		right: 5px;
+		width: 23px;
+		height: 24px;
+		padding: 0;
+		padding-right: 23px;
+
+		background: url(../images/magnifying.png) right center no-repeat;
+		text-transform: uppercase; // WTF IE7?
+		border: none;
+		overflow: hidden;
+		text-indent: 30px;
+	}
+}
+
+
+// needed for search page
+.element-invisible { display: none; }

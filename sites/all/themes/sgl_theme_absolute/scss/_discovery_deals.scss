@@ -1,0 +1,21 @@
+.ds-2col-fluid {
+	> .group-left {
+		max-width: 50%;
+		width: auto;
+	}
+
+	> .group-right {
+		float: left;
+		margin-left: 1em;
+	}
+}
+
+
+.node-discovery-deal {
+	.field-name-field-description,
+	.field-name-field-terms-conditions { margin: 1em 0; }
+
+	.field-name-field-logo {
+		text-align: center;
+	}
+}

@@ -1,0 +1,69 @@
+@import "variables";
+@import "mixins";
+
+body {
+	font-family: sans-serif;
+	font-size: 75%
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: lighter;
+	color: $color-system;
+	margin-top: 0;
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			color: getMainColor($section);
+		}
+	}
+}
+
+h1 {
+	margin: 0 0 16px;
+
+	font-size: 50px;
+	text-transform: lowercase;
+
+}
+
+h2.categoryTitle {
+	margin: 0;
+
+	font-size: 74px;
+	text-transform: lowercase;
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			color: getMainColor($section);
+		}
+	}
+}
+
+a {
+	color: $color-system;
+
+	@each $section in $sections {
+		.pagestyle-#{$section} & {
+			color: getMainColor($section);
+		}
+	}
+}
+
+.node-readmore {
+	background: $color-system2;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			background: get2ndColor($section);
+		}
+	}
+}
+
+.categoryMenuTitle {
+	text-transform: uppercase;
+}

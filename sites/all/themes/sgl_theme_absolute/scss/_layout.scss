@@ -1,0 +1,198 @@
+@import "variables";
+@import "mixins";
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	.ie8 {
+		width: 100%;
+	}
+}
+
+.pageContainer {
+	max-width: 948px;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	width: 948px; // Temp responsive limit;
+}
+
+
+
+html, body {
+	margin: 0;
+}
+
+body {
+	background: url(../images/body-bg.jpg) top center fixed no-repeat;
+	background-size: cover;
+}
+
+.region-navigation {
+	background: url(../images/navigation-clear.png);
+
+	> .pageContainer {
+		height: 50px;
+
+		background: url(../images/navigation-solid.png);
+		overflow: hidden;
+	}
+}
+
+.region-header {
+	position: relative;
+	height: 462px;
+	margin: 0 -16px;
+	padding: 0 16px 16px;
+	z-index: 20;
+
+	background: url(../images/header-bg.png) no-repeat;
+}
+
+.region-highlighted {
+	margin: -346px 0 0;
+	padding: 16px;
+
+	background: getMainColor(system);
+
+	> div {
+		position: relative;
+		min-height: 384px;
+		max-width: 100%;
+		overflow: hidden;
+
+		@include clearfix;
+	}
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			background: getMainColor($section);
+		}
+	}
+}
+
+.page-wrapper {
+	> .pageContainer {
+		background: url(../images/content-bg.png);
+		padding-bottom: 16px;
+	}
+}
+
+.page-body {
+	margin: 16px 0;
+	@include clearfix;
+}
+
+.page-content {
+	position: relative;
+	float: left;
+	height: 576px;
+	width: 592px;
+	padding: 16px;
+
+	background: getMainColor(system);
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			background: getMainColor($section);
+		}
+	}
+
+	> div {
+		height: 558px;
+		padding: 0px 15px 18px;
+		overflow: scroll;
+
+		background: white;
+	}
+}
+
+.page-content--full {
+	width: 916px;
+	height: auto;
+}
+
+
+.page-pre-content {
+	background: white;
+
+	.page-content.fixed & {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		right: 16px;
+		padding: 0 16px 8px;
+		z-index: 5;
+	}
+}
+
+.page-sidebars {
+	float: left;
+	width: 308px;
+	height: 608px;
+	margin-left: 16px;
+	overflow: hidden;
+}
+
+.region-sidebar-first {
+
+}
+
+.region-sidebar-second {
+	margin-top: 16px;
+	padding: 16px;
+	background: $color-system2;
+
+	@each $section in $sections {
+		body.pagestyle-#{$section} & {
+			background: get2ndColor($section);
+		}
+	}
+
+	> div {
+		height: 397px;
+		background: white;
+		overflow: hidden;
+	}
+}
+
+.region-sidebar-first, .region-sidebar-second {
+
+}
+
+.region-bottom {
+	padding: 16px;
+
+	background: $color-blue-dark;
+	@include clearfix;
+}
+
+.page-footer {
+	background: url(../images/footer-clear.png);
+
+	> .pageContainer {
+		height: 143px;
+		padding-top: 30px;
+
+		background: url(../images/footer-solid.png);
+		overflow: hidden;
+	}
+
+	&.sticky {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.region-footer-left {
+	float: left;
+	width: 25%;
+}
+
+.region-footer-right {
+	float: right;
+	width: 70%;
+}

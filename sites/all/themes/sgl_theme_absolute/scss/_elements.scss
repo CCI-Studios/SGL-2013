@@ -1,0 +1,40 @@
+@import "variables";
+
+table {
+	width: 100%;
+}
+
+.view .node-sticky {
+	background: #f7f7f7;
+}
+
+.columnList {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	li {
+		width: 28%;
+		float: left;
+		margin-left: 5%;
+	}
+}
+
+// pagination
+.item-list .pager {
+	text-align: center;
+
+	li {
+		margin-left: 0.5em;
+		background: $color-system;
+	}
+
+	a, span {
+		color: white;
+	}
+}
+
+.panel {
+	width: 50%;
+	float: left;
+}
