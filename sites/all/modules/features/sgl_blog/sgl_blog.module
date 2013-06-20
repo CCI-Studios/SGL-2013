@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SGL Blog feature.
+ */
+
+include_once 'sgl_blog.features.inc';

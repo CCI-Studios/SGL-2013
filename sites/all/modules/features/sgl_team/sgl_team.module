@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SGL Team feature.
+ */
+
+include_once 'sgl_team.features.inc';

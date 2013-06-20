@@ -4,7 +4,7 @@
 			$resize = $('.font-resize'),
 			$up = $resize.find('.up'),
 			$down = $resize.find('.down'),
-			default_size = 12,
+			default_size = 16,
 			size_increment = 2,
 			size_min = 10,
 			size_max = 20,

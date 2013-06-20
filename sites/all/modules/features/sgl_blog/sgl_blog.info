@@ -1,0 +1,11 @@
+name = SGL Blog
+core = 7.x
+package = SGL
+version = 7.x-1.0
+project = sgl_blog
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = blog
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/features

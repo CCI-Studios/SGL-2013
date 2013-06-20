@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SGL News feature.
+ */
+
+include_once 'sgl_news.features.inc';

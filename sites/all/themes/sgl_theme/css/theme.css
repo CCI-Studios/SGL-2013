@@ -6,7 +6,6 @@
 
 html
 {
-	background-color:black;
 	background:black center 44px no-repeat;
 }
 
@@ -261,16 +260,15 @@ html.fill-height .page-width-container
 	font-size:12pt;
 }
 
-.view-projects .node-project.node-teaser
+.view-projects .view-node
 {
 	position:absolute;
 	bottom:0;
 	left:0;
 	z-index:1;
-	color:white;
 }
 
-.view-projects .node-project.node-teaser .field-name-field-image
+.view-projects .views-field-field-image
 {
 	position:absolute;
 	bottom:0;
@@ -278,8 +276,8 @@ html.fill-height .page-width-container
 	height:95px;
 }
 
-.view-projects .node-project.node-teaser .field-name-title,
-.view-projects .node-project.node-teaser .field-name-field-project-name
+.view-projects .views-field-title,
+.view-projects .views-field-field-project-name
 {
 	position:relative;
 	z-index:1;
@@ -290,19 +288,23 @@ html.fill-height .page-width-container
 	padding:0 5px;
 }
 
-.view-projects .node-project.node-teaser .field-name-field-project-name
+.view-projects .views-field-field-project-name a
 {
 	font-weight:lighter;
 	font-size:11pt;
 	padding-bottom:5px;
+	color:white;
+	text-decoration:none;
+	display:block;
 }
 
-.view-projects .node-project.node-teaser .field-name-title a
+.view-projects .views-field-title a
 {
 	color:white;
 	text-decoration:none;
 	font-size:12pt;
 	font-weight:bold;
+	display:block;
 }
 
 .page-footer
