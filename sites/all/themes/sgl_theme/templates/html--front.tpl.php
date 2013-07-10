@@ -51,7 +51,7 @@
   <?php print $head; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
   <meta name="viewport" content="user-scalable=no,width=device-width" />
-  <title><?php print $head_title; ?></title>
+  <title><?php print $head_title_array['name']; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 8]>

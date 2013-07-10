@@ -7,6 +7,7 @@ scripts[] = js/background-changer.js
 scripts[] = js/jquery.cookie.js
 scripts[] = js/open-close-tab.js
 scripts[] = js/font_resize.js
+scripts[] = js/mobile-nav.js
 stylesheets[all][] = css/theme.css
 
 regions[navigation] = Navigation

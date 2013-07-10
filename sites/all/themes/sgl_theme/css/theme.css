@@ -30,11 +30,30 @@ a,
 a:visited
 {
 	color:#98012e;
+	text-decoration:none;
+}
+a:hover
+{
+	text-decoration:underline;
 }
 
 a img 
 {
 	border:0;
+}
+
+h1, h2, h3, h4
+{
+	clear:both;
+	color:#98012e;
+	text-shadow:1px 1px 1px #999;
+}
+
+h3 
+{
+	font-size:1.2em;
+	font-weight:normal;
+	margin-top:0.5em;
 }
 
 .page-width-container
@@ -133,7 +152,8 @@ html.fill-height .page-width-container
 }
 
 #block-system-main-menu ul.menu li a,
-#block-system-main-menu ul.menu li a:visited
+#block-system-main-menu ul.menu li a:visited,
+#block-system-main-menu ul.menu li span.nolink
 {
 	padding:0 20px;
 	line-height:44px;
@@ -141,6 +161,11 @@ html.fill-height .page-width-container
 	color:#98012e;
 	text-decoration:none;
 	text-transform:uppercase;
+}
+
+#block-system-main-menu ul.menu li span.nolink
+{
+	cursor:default;
 }
 
 #block-system-main-menu ul.menu ul.menu
@@ -155,15 +180,23 @@ html.fill-height .page-width-container
 	width:90px;
 	z-index:60;
 }
+#block-system-main-menu ul.menu span.nolink + ul.menu
+{
+	width:116px;
+}
 
 #block-system-main-menu ul.menu ul.menu a,
 #block-system-main-menu ul.menu ul.menu a:visited
 {
 	color:white;
-	padding:0 8px;
+	padding:8px;
 	width:74px;
-	line-height:30px;
+	line-height:100%;
 	font-weight:normal;
+}
+#block-system-main-menu ul.menu span.nolink + ul.menu a
+{
+	width:100px;
 }
 
 #block-system-main-menu ul.menu ul.menu a:hover
@@ -184,13 +217,13 @@ html.fill-height .page-width-container
 
 .region-header .logo
 {
-	padding:0 28px 20px 28px;
+	padding:0 28px 15px 28px;
 	background-color:white;
 	border-radius:0 0 3px 3px;
 	position:relative;
 	z-index:20;
 	float:left;
-	margin-left:40px;
+	margin-left:55px;
 }
 
 .region-header .logo img
@@ -216,25 +249,28 @@ html.fill-height .page-width-container
 	background:url(/sites/all/themes/sgl_theme/images/white-0.60.png) repeat;
 	background:rgba(255, 255, 255, 0.6);
 	*/
-	background:url(/sites/all/themes/sgl_theme/images/sglmap.png) white center center repeat;
+	background:url(/sites/all/themes/sgl_theme/images/sglmap.png) white top center repeat;
 	position:relative;
 }
 
 .region-content > div
 {
-	padding:12px;
+	padding:50px 15px 15px 15px;
+	margin-top:-50px;
 }
 
-.page-content #page-title
+#page-title
 {
-	margin:12px;
-	text-shadow:1px 1px 1px #444;
+	margin:20px 0 8px 15px;
+	text-shadow:1px 1px 1px #999;
+	position:relative;
+	z-index:1;
 }
 
-.page-content > div,
-.front .region-content
+.page-content > div
 {
 	margin:0 55px;
+	position:relative;
 }
 
 #block-views-projects-block
@@ -245,22 +281,24 @@ html.fill-height .page-width-container
 #block-views-projects-block h2
 {
 	font-size:18px;
-	text-shadow:1px 1px 1px #444;
+	text-shadow:1px 1px 1px #999;
 	text-transform:uppercase;
 }
 
-.view-projects .views-row
+.view-projects .views-row,
+.view-urban-design-projects .views-row
 {
 	position:relative;
 	width:220px;
 	height:95px;
 	float:left;
-	margin:10px 10px 10px 10px;
+	margin:8px 6px;
 	border:1px solid white;
 	font-size:12pt;
 }
 
-.view-projects .view-node
+.view-projects .view-node,
+.view-urban-design-projects .view-node
 {
 	position:absolute;
 	bottom:0;
@@ -268,7 +306,8 @@ html.fill-height .page-width-container
 	z-index:1;
 }
 
-.view-projects .views-field-field-image
+.view-projects .views-field-field-image,
+.view-urban-design-projects .views-field-field-image
 {
 	position:absolute;
 	bottom:0;
@@ -277,7 +316,9 @@ html.fill-height .page-width-container
 }
 
 .view-projects .views-field-title,
-.view-projects .views-field-field-project-name
+.view-projects .views-field-field-project-name,
+.view-urban-design-projects .views-field-title,
+.view-urban-design-projects .views-field-field-project-name
 {
 	position:relative;
 	z-index:1;
@@ -288,7 +329,8 @@ html.fill-height .page-width-container
 	padding:0 5px;
 }
 
-.view-projects .views-field-field-project-name a
+.view-projects .views-field-field-project-name a,
+.view-urban-design-projects .views-field-field-project-name a
 {
 	font-weight:lighter;
 	font-size:11pt;
@@ -298,7 +340,8 @@ html.fill-height .page-width-container
 	display:block;
 }
 
-.view-projects .views-field-title a
+.view-projects .views-field-title a,
+.view-urban-design-projects .views-field-title a
 {
 	color:white;
 	text-decoration:none;
@@ -367,7 +410,7 @@ html.fill-height .page-width-container
 #block-views-news-block h2
 {
 	font-size:18px;
-	text-shadow:1px 1px 1px #444;
+	text-shadow:1px 1px 1px #999;
 	margin-bottom:10px;
 	text-transform:uppercase;
 }
@@ -375,6 +418,7 @@ html.fill-height .page-width-container
 #block-views-news-block h3
 {
 	font-size:14px;
+	font-weight:bold;
 }
 
 .read-more
@@ -494,27 +538,40 @@ html.fill-height .page-width-container
 {
 	float:right;
 	position:relative;
-	top:7px;
+	top:5px;
 	margin-left:10px;
+	width:50px;
+	height:26px;
 }
 
 .font-resize a
 {
 	text-decoration:none;
-	margin-right:5px;
+	position:absolute;
+	bottom:0;
 	vertical-align:bottom;
+	line-height:100%;
 }
 
 .font-resize .up
 {
 	font-size:1.2em;
+	left:20px;
+}
+.font-resize .down
+{
+	left:0;
+}
+
+.node-team-member a 
+{
+	text-decoration:none;
 }
 
 .node-team-member img
 {
 	float:left;
-	margin:0 1em 1em 0;
-	box-shadow:2px 2px 5px #444;
+	margin:0 25px 8px 0;
 }
 
 .node-team-member.node-teaser
@@ -531,7 +588,9 @@ body.admin-menu .region-navigation
 body.admin-menu ul.primary
 {
 	margin:0;
-	border-color:#ddd;
+	border:0;
+	position:absolute;
+	top:-34px;
 }
 
 .background-images
@@ -578,31 +637,67 @@ body.admin-menu ul.primary
 	text-decoration:underline;
 }
 
+.page-node .node-land-use-project .field-name-field-image,
+.page-node .node-urban-design-project .field-name-field-image
+{
+	float:right;
+	margin:0 0 1em 1em;
+}
+
+#block-system-main ul
+{
+	margin-left:20px;
+}
+
+.node .field-name-field-project-name
+{
+	font-size:1.3em;
+	color:#98012e;
+	text-shadow:1px 1px 1px #999;
+	margin-bottom:0.5em;
+}
+
+.view-urban-design-projects .views-row
+{
+	margin-bottom:1em;
+}
+
+.open-nav
+{
+	display:none;
+	text-transform:uppercase;
+}
+.open-nav:hover
+{
+	text-decoration:none;
+}
+
+
 
 @media screen and (max-width: 720px)
 {
 	html
 	{
 		background-image:none!important;
+		background-color:white!important;
 	}
 
 	html .region-navigation
 	{
 		top:93px;
 		height:38px;
+		display:none;
 	}
 
 	html .region-header > div
 	{
 		padding-top:0;
-		height:131px;
+		height:100px;
 	}
 
 	html .region-header .logo
 	{
 		border-radius:0;
-		width:100%;
-		display:block;
 		padding:3px 0 0 0;
 		margin-left:0;
 	}
@@ -628,15 +723,21 @@ body.admin-menu ul.primary
 		display:none;
 	}
 
-	html #block-system-main-menu .content > ul.menu
+	#block-system-main-menu
+	{
+		display:none;
+	}
+
+	#block-system-main-menu .content > ul.menu
 	{
 		float:none;
 		overflow:hidden;
 	}
 
-	html .region-navigation #block-system-main-menu ul.menu li a
+	html .region-navigation #block-system-main-menu ul.menu li a,
+	html .region-navigation #block-system-main-menu ul.menu li span.nolink
 	{
-		padding:0 8px;
+		padding:0 3px;
 		font-size:12px;
 		line-height:38px;
 	}
@@ -649,11 +750,6 @@ body.admin-menu ul.primary
 	html .page-body > div
 	{
 		vertical-align:top;
-	}
-
-	html #block-system-main-menu ul.menu > li:hover > ul.menu
-	{
-		display:none;
 	}
 
 	html #block-locale-language
@@ -679,6 +775,87 @@ body.admin-menu ul.primary
 	{
 		display:none;
 	}
+
+	.open-nav
+	{
+		display:block;
+		position:absolute;
+		top:20px;
+		right:20px;
+		z-index:20;
+		padding-right:20px;
+		background:url(../images/arrow-small-down.png) no-repeat right center;
+	}
+
+	.nav-open .open-nav
+	{
+		background-image:url(../images/arrow-small-up.png);
+	}
+
+	.nav-open #block-system-main-menu
+	{
+		display:block;
+	}
+
+	.nav-open .region-header > div
+	{
+		height:377px;
+	}
+
+	.nav-open .region-navigation
+	{
+		height:260px;
+		padding:10px 0;
+		background-color:#98012e;
+		display:block;
+	}
+
+	.nav-open .region-navigation #block-system-main-menu ul.menu li a,
+	.nav-open .region-navigation #block-system-main-menu ul.menu li span.nolink
+	{
+		color:white;
+		line-height:24px;
+	}
+
+	.nav-open #block-system-main-menu ul.menu
+	{
+		overflow:visible;
+		margin-left:25px;
+	}
+	.nav-open #block-system-main-menu ul.menu ul.menu
+	{
+		display:block;
+		position:static;
+		width:auto!important;
+	}
+
+	.nav-open #block-system-main-menu ul.menu ul.menu li 
+	{
+		float:none;
+	}
+
+	.nav-open #block-system-main-menu ul.menu ul.menu li a
+	{
+		background:none;
+		line-height:16px;
+		width:auto;
+	}
+
+
+	#page-title
+	{
+		margin-top:0;
+	}
+
+	#block-system-main-menu ul.menu li
+	{
+		float:none;
+	}
+
+	.page-width-container
+	{
+		height:auto!important;
+	}
 }
 
 
@@ -687,6 +864,22 @@ html.lt-ie8 .region-header .logo
 {
 	margin-top:0;
 }
+
+
+html.lt-ie8 .font-resize
+{
+	height:30px;
+}
+html.lt-ie8 .font-resize a 
+{
+	height:30px;
+	line-height:30px;
+}
+html.lt-ie8 .font-resize .up 
+{
+	bottom:2px;
+}
+
 
 html.lt-ie8 #open-close-tab
 {
