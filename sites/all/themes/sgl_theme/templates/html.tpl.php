@@ -50,7 +50,7 @@
 <head>
   <?php print $head; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-  <meta name="viewport" content="user-scalable=no,width=device-width" />
+  <meta name="viewport" content="width=device-width" />
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>

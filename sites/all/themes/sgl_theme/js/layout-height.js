@@ -1,7 +1,19 @@
 (function ($) {
 	$(function(){
 		adjustLayout();
+		adjustTitle();
 	});
+
+	function adjustTitle()
+	{
+		if ($("#page-title").height() > 40)
+		{
+			$(".region-content > div").css({
+				"padding-top":"137px",
+				"margin-top":"-137px"
+			});
+		}
+	}
 })(jQuery);
 
 function adjustLayout()

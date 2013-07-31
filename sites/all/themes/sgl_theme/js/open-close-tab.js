@@ -2,32 +2,31 @@
 	$(function(){
 		var $close = $("#close-tab"),
 			$open = $("#open-tab"),
-			$body = $("#block-system-main");
+			$body = $(".page-content > div");
 
 		$close.click(function(){
-			$body.slideUp();
+			$("#close-tab").fadeOut(50);
+			$body.slideUp(function(){
+				$("#open-tab").fadeIn();
+			});
 			fillHeight();
 			if (!layoutNeedsFillHeight())
 			{
 				$(".page-footer").hide();
 				$(".page-footer").fadeIn(400);
 			}
-
-			$("#close-tab").hide();
-			$("#open-tab").show();
 		});
 
 		$open.click(function() {
+			$("#open-tab").fadeOut(50);
 			$body.slideDown(function(){
+				$("#close-tab").fadeIn();
 				adjustLayout();
 				$(".page-footer").fadeIn();
 			});
 
 			if (!layoutNeedsFillHeight())
 				$(".page-footer").fadeOut();
-
-			$("#close-tab").show();
-			$("#open-tab").hide();
 		});
 	});
 })(jQuery);

@@ -135,12 +135,12 @@ html.fill-height .page-width-container
 	z-index:30;
 }
 
-#block-system-main-menu .content > ul.menu
+#block-system-main-menu .content > ul
 {
 	float:right;
 }
 
-#block-system-main-menu ul.menu li
+#block-system-main-menu ul li
 {
 	float:left;
 	font-size:14px;
@@ -151,9 +151,9 @@ html.fill-height .page-width-container
 	position:relative;
 }
 
-#block-system-main-menu ul.menu li a,
-#block-system-main-menu ul.menu li a:visited,
-#block-system-main-menu ul.menu li span.nolink
+#block-system-main-menu ul li a,
+#block-system-main-menu ul li a:visited,
+#block-system-main-menu ul li span.nolink
 {
 	padding:0 20px;
 	line-height:44px;
@@ -163,12 +163,12 @@ html.fill-height .page-width-container
 	text-transform:uppercase;
 }
 
-#block-system-main-menu ul.menu li span.nolink
+#block-system-main-menu ul li span.nolink
 {
 	cursor:default;
 }
 
-#block-system-main-menu ul.menu ul.menu
+#block-system-main-menu ul ul
 {
 	display:none;
 	position:absolute;
@@ -180,35 +180,49 @@ html.fill-height .page-width-container
 	width:90px;
 	z-index:60;
 }
-#block-system-main-menu ul.menu span.nolink + ul.menu
+#block-system-main-menu ul span.nolink + ul
 {
 	width:116px;
 }
 
-#block-system-main-menu ul.menu ul.menu a,
-#block-system-main-menu ul.menu ul.menu a:visited
+#block-system-main-menu ul ul a,
+#block-system-main-menu ul ul a:visited,
+#block-system-main-menu ul ul span.nolink
 {
 	color:white;
 	padding:8px;
-	width:74px;
+	width:100px;
 	line-height:100%;
 	font-weight:normal;
 }
-#block-system-main-menu ul.menu span.nolink + ul.menu a
-{
-	width:100px;
-}
 
-#block-system-main-menu ul.menu ul.menu a:hover
+#block-system-main-menu ul ul a:hover
 {
 	background-color:white;
 	color:#98012e;
 }
 
-#block-system-main-menu ul.menu > li:hover > ul.menu
+#block-system-main-menu ul > li:hover > ul,
+#block-system-main-menu ul > li.open > ul
 {
 	display:block;
 }
+
+
+#block-system-main-menu ul ul ul
+{
+	left:100%;
+	top:0;
+	border-radius:0 3px 3px 0;
+}
+
+#block-system-main-menu ul ul li.expanded
+{
+	background-image:url(../images/arrow-small-right.png);
+	background-position:100px center;
+	background-repeat:no-repeat;
+}
+
 
 .region-header p
 {
@@ -255,13 +269,14 @@ html.fill-height .page-width-container
 
 .region-content > div
 {
-	padding:50px 15px 15px 15px;
-	margin-top:-50px;
+	padding:100px 100px 50px 100px;
+	margin-top:-100px;
+	overflow:hidden;
 }
 
 #page-title
 {
-	margin:20px 0 8px 15px;
+	margin:0 100px 0 100px;
 	text-shadow:1px 1px 1px #999;
 	position:relative;
 	z-index:1;
@@ -269,13 +284,14 @@ html.fill-height .page-width-container
 
 .page-content > div
 {
-	margin:0 55px;
+	margin:94px 55px 0 55px;
 	position:relative;
 }
 
 #block-views-projects-block
 {
 	float:left;
+	margin-right:-4px;
 }
 
 #block-views-projects-block h2
@@ -285,6 +301,13 @@ html.fill-height .page-width-container
 	text-transform:uppercase;
 }
 
+#block-views-projects-block .content,
+.view-projects.view-display-id-page,
+.view-urban-design-projects.view-display-id-page
+{
+	margin-right:-48px;
+}
+
 .view-projects .views-row,
 .view-urban-design-projects .views-row
 {
@@ -292,7 +315,7 @@ html.fill-height .page-width-container
 	width:220px;
 	height:95px;
 	float:left;
-	margin:8px 6px;
+	margin:8px 48px 8px 0;
 	border:1px solid white;
 	font-size:12pt;
 }
@@ -323,10 +346,20 @@ html.fill-height .page-width-container
 	position:relative;
 	z-index:1;
 	text-shadow:1px 1px 1px black;
-	background:url(/sites/all/themes/sgl_theme/images/black-0.20.png) repeat;
-	background:rgba(0,0,0,0.2);
+	background:url(/sites/all/themes/sgl_theme/images/black-0.30.png) repeat;
+	background:rgba(0,0,0,0.3);
 	width:210px;
 	padding:0 5px;
+}
+
+.view-projects .views-field-title a,
+.view-urban-design-projects .views-field-title a
+{
+	color:white;
+	text-decoration:none;
+	font-size:12pt;
+	font-weight:bold;
+	display:block;
 }
 
 .view-projects .views-field-field-project-name a,
@@ -337,16 +370,6 @@ html.fill-height .page-width-container
 	padding-bottom:5px;
 	color:white;
 	text-decoration:none;
-	display:block;
-}
-
-.view-projects .views-field-title a,
-.view-urban-design-projects .views-field-title a
-{
-	color:white;
-	text-decoration:none;
-	font-size:12pt;
-	font-weight:bold;
 	display:block;
 }
 
@@ -401,9 +424,7 @@ html.fill-height .page-width-container
 #block-views-news-block
 {
 	font-size:14px;
-	width:200px;
-	margin-right:20px;
-	margin-bottom:12px;
+	margin-bottom:40px;
 	float:left;
 }
 
@@ -429,6 +450,13 @@ html.fill-height .page-width-container
 #block-system-main
 {
 	color:black;
+}
+
+#block-system-main ul,
+#block-system-main ol
+{
+	margin-left:20px;
+	margin-bottom:0.8em;
 }
 
 .page-front #block-system-main
@@ -479,14 +507,15 @@ html.fill-height .page-width-container
 #open-close-tab
 {
 	position:absolute;
-	right:20px;
-	top:-31px;
+	right:75px;
 	cursor:pointer;
 }
 
 #open-tab 
 {
 	display:none;
+	position:relative;
+	top:-31px;
 }
 
 .node-article.view-mode-full .field-name-post-date
@@ -502,6 +531,7 @@ html.fill-height .page-width-container
 #clients-list ul
 {
 	margin-bottom:1em;
+	margin-left:-8px;
 	list-style:none;
 	overflow:hidden;
 	position:relative;
@@ -525,7 +555,7 @@ html.fill-height .page-width-container
 
 #services-list ul
 {
-	margin-left:20px;
+	margin-left:0;
 	margin-bottom:1em;
 }
 
@@ -563,21 +593,37 @@ html.fill-height .page-width-container
 	left:0;
 }
 
-.node-team-member a 
-{
-	text-decoration:none;
-}
-
 .node-team-member img
 {
 	float:left;
-	margin:0 25px 8px 0;
+	margin:0 0 8px 0;
 }
 
 .node-team-member.node-teaser
 {
 	float:left;
-	margin:5px 0 5px 8px;
+	margin:5px 0 5px 0;
+}
+
+.node-team-member .field-name-body,
+.node-team-member .field-name-back-to-our-team
+{
+	padding-left:242px;
+}
+
+.view-our-team.view-display-id-page
+{
+	margin-right:-85px;
+}
+.view-our-team.view-display-id-page .node-team-member img 
+{
+	margin-right:85px;
+}
+
+a.cv_pdf
+{
+	float:left;
+	clear:left;
 }
 
 body.admin-menu .region-navigation
@@ -644,11 +690,6 @@ body.admin-menu ul.primary
 	margin:0 0 1em 1em;
 }
 
-#block-system-main ul
-{
-	margin-left:20px;
-}
-
 .node .field-name-field-project-name
 {
 	font-size:1.3em;
@@ -671,6 +712,77 @@ body.admin-menu ul.primary
 {
 	text-decoration:none;
 }
+
+#background
+{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	overflow:hidden;
+}
+#background .background-image
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	z-index:-1;
+}
+#background .background-image.landscape
+{
+	height:100%;
+	width:auto;
+}
+#background .background-image.new 
+{
+	left:-999999px;
+}
+
+#node-16 textarea
+{
+	width:320px;
+}
+#node-16 .form-required
+{
+	display:none;
+}
+
+.node-land-use-project .field-name-field-photos,
+.node-urban-design-project .field-name-field-photos
+{
+	text-align:center;
+	margin-bottom:1em;
+}
+
+#block-system-main img 
+{
+	max-width:100%;
+}
+
+.field-name-field-image-credit
+{
+	float:right;
+	position:relative;
+	margin-top:-41px;
+	line-height:1.5em;
+	padding:0 6px;
+	color:#444;
+	font-size:14px;
+	background:url(../images/white-0.60.png);
+	background:rgba(255, 255, 255, 0.6);
+	z-index:1;
+}
+
+.front #block-system-main
+{
+	margin-bottom:30px;
+}
+
+
+
 
 
 
@@ -699,18 +811,29 @@ body.admin-menu ul.primary
 	{
 		border-radius:0;
 		padding:3px 0 0 0;
-		margin-left:0;
+		margin:0 auto;
+		width:100%;
+		width:217px;
+		height:90px;
+		display:block;
+		float:none;
 	}
 
 	html .region-header .logo img
 	{
-		margin-left:3px;
+		margin:0;
 	}
 
 	html .page-content > div,
 	html .front .region-content
 	{
 		margin:0;
+	}
+
+	.region-content > div
+	{
+		padding-top:0;
+		margin-top:0;
 	}
 
 	html .page-footer p
@@ -799,12 +922,12 @@ body.admin-menu ul.primary
 
 	.nav-open .region-header > div
 	{
-		height:377px;
+		height:411px;
 	}
 
 	.nav-open .region-navigation
 	{
-		height:260px;
+		height:298px;
 		padding:10px 0;
 		background-color:#98012e;
 		display:block;
@@ -855,6 +978,18 @@ body.admin-menu ul.primary
 	.page-width-container
 	{
 		height:auto!important;
+	}
+}
+
+
+
+@media screen and (max-width:480px)
+{
+	.node-team-member .field-name-body,
+	.node-team-member .field-name-back-to-our-team
+	{
+		padding-left:0;
+		clear:left;
 	}
 }
 

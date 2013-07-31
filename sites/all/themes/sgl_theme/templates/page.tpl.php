@@ -75,6 +75,8 @@
  */
 ?>
 
+<div id="background"></div>
+
 <?php print render($page['navigation']); ?>
 
 <div class="page-width-container">
@@ -83,7 +85,9 @@
 		<?php print render($page['highlighted']) ?>
 
 		<div class="page-body">
-			<div class="page-content"><div>
+			<div class="page-content">
+				<span id="open-close-tab"><img src="/sites/all/themes/sgl_theme/images/open-tab.png" alt="Open" id="open-tab"  /><img src="/sites/all/themes/sgl_theme/images/close-tab.png" alt="Close" id="close-tab" /></span>
+				<div>
 				<div class="page-pre-content">
 					<?php print render($page['pre_content']) ?>
 				</div>

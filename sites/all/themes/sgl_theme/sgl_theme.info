@@ -8,6 +8,7 @@ scripts[] = js/jquery.cookie.js
 scripts[] = js/open-close-tab.js
 scripts[] = js/font_resize.js
 scripts[] = js/mobile-nav.js
+scripts[] = js/menu-dropdown.js
 stylesheets[all][] = css/theme.css
 
 regions[navigation] = Navigation
