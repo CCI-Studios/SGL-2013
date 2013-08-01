@@ -85,20 +85,13 @@
 		<?php print render($page['highlighted']) ?>
 
 		<div class="page-body">
-			<div class="page-content">
-				<span id="open-close-tab"><img src="/sites/all/themes/sgl_theme/images/open-tab.png" alt="Open" id="open-tab"  /><img src="/sites/all/themes/sgl_theme/images/close-tab.png" alt="Close" id="close-tab" /></span>
-				<div>
+			<div class="page-content"><div>
 				<div class="page-pre-content">
 					<?php print render($page['pre_content']) ?>
 				</div>
 
 				<div class="page-content-inner">
 					<a id="main-content"></a>
-					<?php print render($title_prefix); ?>
-					<?php if ($title): ?>
-						<h1 class="title" id="page-title"><?php print $title; ?></h1>
-					<?php endif; ?>
-					<?php print render($title_suffix); ?>
 
 					<?php print $messages; ?>
 					<?php print render($tabs); ?>
@@ -107,8 +100,19 @@
 						<ul class="action-links"><?php print render($action_links); ?></ul>
 					<?php endif; ?>
 
-					<?php print render($page['content']); ?>
-					<?php print $feed_icons; ?>
+
+					<div class="region-content-container">
+
+						<span id="open-close-tab"><img src="/sites/all/themes/sgl_theme/images/open-tab.png" alt="Open" id="open-tab"  /><img src="/sites/all/themes/sgl_theme/images/close-tab.png" alt="Close" id="close-tab" /></span>
+						<div>
+							<?php if ($title): ?>
+								<h1 class="title" id="page-title"><?php print $title; ?></h1>
+							<?php endif; ?>
+
+							<?php print render($page['content']); ?>
+						</div>
+					</div>
+					
 
 					<?php print render($page['post_content']) ?>
 				</div>

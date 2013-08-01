@@ -1,7 +1,7 @@
 (function ($) {
 	$(function(){
 		adjustLayout();
-		adjustTitle();
+		//adjustTitle();
 	});
 
 	function adjustTitle()
@@ -11,6 +11,10 @@
 			$(".region-content > div").css({
 				"padding-top":"137px",
 				"margin-top":"-137px"
+			});
+
+			$("#open-close-tab").css({
+				"top":"-123px"
 			});
 		}
 	}

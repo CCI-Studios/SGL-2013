@@ -257,17 +257,13 @@ html.fill-height .page-width-container
 	margin-right:auto;
 }
 
-.region-content
+.region-content-container
 {
-	/*
-	background:url(/sites/all/themes/sgl_theme/images/white-0.60.png) repeat;
-	background:rgba(255, 255, 255, 0.6);
-	*/
 	background:url(/sites/all/themes/sgl_theme/images/sglmap.png) white top center repeat;
 	position:relative;
 }
 
-.region-content > div
+.region-content-container > div
 {
 	padding:100px 100px 50px 100px;
 	margin-top:-100px;
@@ -276,7 +272,6 @@ html.fill-height .page-width-container
 
 #page-title
 {
-	margin:0 100px 0 100px;
 	text-shadow:1px 1px 1px #999;
 	position:relative;
 	z-index:1;
@@ -507,15 +502,14 @@ html.fill-height .page-width-container
 #open-close-tab
 {
 	position:absolute;
-	right:75px;
+	right:30px;
+	top:-31px;
 	cursor:pointer;
 }
 
 #open-tab 
 {
 	display:none;
-	position:relative;
-	top:-31px;
 }
 
 .node-article.view-mode-full .field-name-post-date
@@ -741,7 +735,8 @@ body.admin-menu ul.primary
 	left:-999999px;
 }
 
-#node-16 textarea
+#node-16 textarea,
+#node-16 input
 {
 	width:320px;
 }
@@ -779,6 +774,12 @@ body.admin-menu ul.primary
 .front #block-system-main
 {
 	margin-bottom:30px;
+}
+
+.clearfix:after
+{
+	content:"";
+	display:none;
 }
 
 
@@ -824,13 +825,13 @@ body.admin-menu ul.primary
 		margin:0;
 	}
 
-	html .page-content > div,
-	html .front .region-content
+	html .page-content-container > div,
+	html .front .region-content-container
 	{
 		margin:0;
 	}
 
-	.region-content > div
+	.region-content-container > div
 	{
 		padding-top:0;
 		margin-top:0;
@@ -1038,7 +1039,7 @@ html.lt-ie8 .page-footer p
 }
 
 html.lt-ie8 .page-content > div,
-html.lt-ie8 .front .region-content
+html.lt-ie8 .front .region-content-container
 {
 	margin:0;
 }

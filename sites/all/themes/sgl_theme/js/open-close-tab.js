@@ -2,12 +2,12 @@
 	$(function(){
 		var $close = $("#close-tab"),
 			$open = $("#open-tab"),
-			$body = $(".page-content > div");
+			$body = $(".region-content-container > div");
 
 		$close.click(function(){
-			$("#close-tab").fadeOut(50);
 			$body.slideUp(function(){
-				$("#open-tab").fadeIn();
+				$("#close-tab").hide();
+				$("#open-tab").show();
 			});
 			fillHeight();
 			if (!layoutNeedsFillHeight())
@@ -18,9 +18,9 @@
 		});
 
 		$open.click(function() {
-			$("#open-tab").fadeOut(50);
 			$body.slideDown(function(){
-				$("#close-tab").fadeIn();
+				$("#close-tab").show();
+				$("#open-tab").hide();
 				adjustLayout();
 				$(".page-footer").fadeIn();
 			});
