@@ -279,7 +279,7 @@ html.fill-height .page-width-container
 
 .page-content > div
 {
-	margin:94px 55px 0 55px;
+	margin:120px 55px 0 55px;
 	position:relative;
 }
 
@@ -736,7 +736,7 @@ body.admin-menu ul.primary
 }
 
 #node-16 textarea,
-#node-16 input
+#node-16 input[type=text]
 {
 	width:320px;
 }
@@ -795,9 +795,9 @@ body.admin-menu ul.primary
 		background-color:white!important;
 	}
 
-	html .region-navigation
+	.region-navigation
 	{
-		top:93px;
+		top:130px;
 		height:38px;
 		display:none;
 	}
@@ -834,7 +834,8 @@ body.admin-menu ul.primary
 	.region-content-container > div
 	{
 		padding-top:0;
-		margin-top:0;
+		margin:0;
+		padding:0 25px;
 	}
 
 	html .page-footer p
@@ -900,14 +901,19 @@ body.admin-menu ul.primary
 		display:none;
 	}
 
+	.page-content > div
+	{
+		margin:0;
+	}
+
 	.open-nav
 	{
 		display:block;
-		position:absolute;
-		top:20px;
-		right:20px;
-		z-index:20;
 		padding-right:20px;
+		margin-left:25px;
+		margin-bottom:10px;
+		margin-top:10px;
+		float:left;
 		background:url(../images/arrow-small-down.png) no-repeat right center;
 	}
 
@@ -923,13 +929,16 @@ body.admin-menu ul.primary
 
 	.nav-open .region-header > div
 	{
-		height:411px;
+		height:438px;
 	}
 
 	.nav-open .region-navigation
 	{
-		height:298px;
-		padding:10px 0;
+		display:block;
+	}
+
+	.nav-open #block-system-main-menu
+	{
 		background-color:#98012e;
 		display:block;
 	}
