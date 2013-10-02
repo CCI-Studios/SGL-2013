@@ -1436,4 +1436,3 @@ function locale_date_format_reset_form_submit($form, &$form_state) {
     ->execute();
   $form_state['redirect'] = 'admin/config/regional/date-time/locale';
 }
-

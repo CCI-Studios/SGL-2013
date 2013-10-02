@@ -30,11 +30,11 @@ a,
 a:visited
 {
 	color:#98012e;
-	text-decoration:none;
+	text-decoration:none!important;
 }
 a:hover
 {
-	text-decoration:underline;
+	text-decoration:underline!important;
 }
 
 a img 
@@ -77,6 +77,7 @@ html.fill-height .page-width-container
 	display:table;
 	border-spacing:0;
 	border-collapse:collapse;
+	border:0;
 }
 
 .region-header
@@ -113,6 +114,7 @@ html.fill-height .page-width-container
 	width:100%;
 	border-spacing:0;
 	border-collapse:collapse;
+	border:0;
 }
 
 .page-body.bottom-up > div
@@ -159,7 +161,7 @@ html.fill-height .page-width-container
 	line-height:44px;
 	display:block;
 	color:#98012e;
-	text-decoration:none;
+	text-decoration:none!important;
 	text-transform:uppercase;
 }
 
@@ -218,7 +220,7 @@ html.fill-height .page-width-container
 
 #block-system-main-menu ul ul li.expanded
 {
-	background-image:url(../images/arrow-small-right.png);
+	background-image:url(../images/arrow-menu-right.png);
 	background-position:100px center;
 	background-repeat:no-repeat;
 }
@@ -242,7 +244,6 @@ html.fill-height .page-width-container
 
 .region-header .logo img
 {
-	width:217px;
 	height:90px;
 	position:relative;
 }
@@ -339,10 +340,8 @@ html.fill-height .page-width-container
 .view-urban-design-projects .views-field-field-project-name
 {
 	position:relative;
-	z-index:1;
+	z-index:2;
 	text-shadow:1px 1px 1px black;
-	background:url(/sites/all/themes/sgl_theme/images/black-0.30.png) repeat;
-	background:rgba(0,0,0,0.3);
 	width:210px;
 	padding:0 5px;
 }
@@ -351,7 +350,7 @@ html.fill-height .page-width-container
 .view-urban-design-projects .views-field-title a
 {
 	color:white;
-	text-decoration:none;
+	text-decoration:none!important;
 	font-size:12pt;
 	font-weight:bold;
 	display:block;
@@ -364,8 +363,20 @@ html.fill-height .page-width-container
 	font-size:11pt;
 	padding-bottom:5px;
 	color:white;
-	text-decoration:none;
+	text-decoration:none!important;
 	display:block;
+}
+
+.view-projects .project-overlay,
+.view-urban-design-projects .project-overlay
+{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:95px;
+	background:url(/sites/all/themes/sgl_theme/images/black-0.30.png) repeat;
+	background:rgba(0,0,0,0.2);
+	z-index:1;
 }
 
 .page-footer
@@ -462,8 +473,8 @@ html.fill-height .page-width-container
 #block-locale-language
 {
 	position:absolute;
-	right:175px;
-	top:-18px;
+	right:36px;
+	top:10px;
 }
 
 #block-locale-language ul.language-switcher-locale-url li
@@ -570,7 +581,7 @@ html.fill-height .page-width-container
 
 .font-resize a
 {
-	text-decoration:none;
+	text-decoration:none!important;
 	position:absolute;
 	bottom:0;
 	vertical-align:bottom;
@@ -587,13 +598,16 @@ html.fill-height .page-width-container
 	left:0;
 }
 
-.node-team-member img
+.view-our-team .views-field-field-image
 {
 	float:left;
 	margin:0 0 8px 0;
+	height:160px;
+	width:200px;
 }
 
-.node-team-member.node-teaser
+.view-our-team .views-row,
+.node-team-member img
 {
 	float:left;
 	margin:5px 0 5px 0;
@@ -609,7 +623,7 @@ html.fill-height .page-width-container
 {
 	margin-right:-85px;
 }
-.view-our-team.view-display-id-page .node-team-member img 
+.view-our-team.view-display-id-page .views-row
 {
 	margin-right:85px;
 }
@@ -643,8 +657,8 @@ body.admin-menu ul.primary
 {
 	position:fixed;
 	top:50%;
-	height:70px;
-	margin-top:-35px;
+	height:38px;
+	margin-top:-19px;
 	cursor:pointer;
 }
 
@@ -704,7 +718,7 @@ body.admin-menu ul.primary
 }
 .open-nav:hover
 {
-	text-decoration:none;
+	text-decoration:none!important;
 }
 
 #background
@@ -735,12 +749,12 @@ body.admin-menu ul.primary
 	left:-999999px;
 }
 
-#node-16 textarea,
-#node-16 input[type=text]
+#webform-client-form-16 textarea,
+#webform-client-form-16 input[type=text]
 {
 	width:320px;
 }
-#node-16 .form-required
+#webform-client-form-16 .form-required
 {
 	display:none;
 }
@@ -749,7 +763,34 @@ body.admin-menu ul.primary
 .node-urban-design-project .field-name-field-photos
 {
 	text-align:center;
-	margin-bottom:1em;
+}
+
+.node-land-use-project .field-name-body,
+.node-urban-design-project .field-name-body
+{
+	margin-top:1em;
+}
+
+.node-land-use-project .field-name-field-photos img,
+.node-urban-design-project .field-name-field-photos img
+{
+	height:auto;
+	max-width:100%;
+}
+
+.node-urban-design-project ul.image-numbers,
+.node-land-use-project ul.image-numbers
+{
+	list-style:none;
+	text-align:center;
+	margin:0!important;
+}
+.node-urban-design-project ul.image-numbers li,
+.node-land-use-project ul.image-numbers li
+{
+	list-style:none;
+	margin-right:12px;
+	display:inline;
 }
 
 #block-system-main img 
@@ -759,16 +800,8 @@ body.admin-menu ul.primary
 
 .field-name-field-image-credit
 {
-	float:right;
-	position:relative;
-	margin-top:-41px;
-	line-height:1.5em;
-	padding:0 6px;
-	color:#444;
 	font-size:14px;
-	background:url(../images/white-0.60.png);
-	background:rgba(255, 255, 255, 0.6);
-	z-index:1;
+	text-align:center;
 }
 
 .front #block-system-main
@@ -813,8 +846,6 @@ body.admin-menu ul.primary
 		border-radius:0;
 		padding:3px 0 0 0;
 		margin:0 auto;
-		width:100%;
-		width:217px;
 		height:90px;
 		display:block;
 		float:none;
@@ -879,9 +910,8 @@ body.admin-menu ul.primary
 
 	html #block-locale-language
 	{
-		top:auto;
-		bottom:-18px;
-		right:0;
+		right:10px;
+		top:-1em;
 		z-index:1;
 	}
 
@@ -1029,11 +1059,6 @@ html.lt-ie8 .font-resize .up
 html.lt-ie8 #open-close-tab
 {
 	display:none;
-}
-
-html.lt-ie8 #block-locale-language
-{
-	right:0;
 }
 
 html.lt-ie8 .background-changer-left,

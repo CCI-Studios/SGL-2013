@@ -9,6 +9,7 @@ scripts[] = js/open-close-tab.js
 scripts[] = js/font_resize.js
 scripts[] = js/mobile-nav.js
 scripts[] = js/menu-dropdown.js
+scripts[] = js/project-images.js
 stylesheets[all][] = css/theme.css
 
 regions[navigation] = Navigation

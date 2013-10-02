@@ -2,6 +2,8 @@
 	$(function(){
 		adjustLayout();
 		//adjustTitle();
+
+		$("#block-system-main img").load(function(){adjustLayout();});
 	});
 
 	function adjustTitle()

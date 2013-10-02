@@ -28,6 +28,10 @@
 			if (!layoutNeedsFillHeight())
 				$(".page-footer").fadeOut();
 		});
+
+		$(".page-projects #block-locale-language a").each(function(){
+			$(this).replaceWith("<span class='language-link locale-untranslated' style='text-decoration:line-through;'>"+$(this).text()+"</span>");
+		});
 	});
 })(jQuery);
 
